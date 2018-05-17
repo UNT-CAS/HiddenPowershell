@@ -35,7 +35,7 @@ sMessage = "HiddenPowershell Running: " _
             & vbCrLf & vbTab & sArgs
 oShell.LogEvent LOG_EVENT_INFORMATION, sMessage
 
-iReturn = oShell.Run(sArgs, 0, False)
+iReturn = oShell.Run(sArgs, 0, True)
 
 If iReturn <> 0 Then    
     iExitStatus = LOG_EVENT_ERROR
