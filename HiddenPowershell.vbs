@@ -19,9 +19,9 @@ Dim sMessage : sMessage = ""
 For Each sArg in Wscript.Arguments
     If InStr(sArg, " ") > 0 Then
         ' If there's a space in the argument, wrap it in quotes.
-        sArgs = sArgs &" """& sArg &""""
+        sArgs = sArgs & " """ & sArg & """"
     Else
-        sArgs = sArgs &" "& sArg
+        sArgs = sArgs & " " & sArg
     End If
 Next
 
@@ -39,7 +39,7 @@ End If
 sMessage = "HiddenPowershell Exited: " _
             & vbCrLf & vbTab & Wscript.ScriptFullName _
             & vbCrLf & vbTab & sArgs _
-            & vbCrLf & vbTab & "Exit Code: " &iReturn
+            & vbCrLf & vbTab & "Exit Code: " & iReturn
 oShell.LogEvent iExitStatus, sMessage
 
 Wscript.Quit iReturn
