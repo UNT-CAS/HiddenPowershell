@@ -4,11 +4,6 @@
 ' Will run Powershell in a hidden console, like this:
 '   powershell.exe -ExecutionPolicy ByPass -File "C:\Program Files\Get-HelloWorld.ps1"
 '
-' I recommend that you also pass the `-WindowStyle Hidden` parameter, 
-' so that the executing powershell script knows that it's hidden.
-' Using `-WindowStyle Hidden` without this script, doesn't completely hide
-' the powershell console.
-'
 ' More Info: https://github.com/UNT-CAS/HiddenPowershell
 
 Set oShell = CreateObject("Wscript.Shell")
