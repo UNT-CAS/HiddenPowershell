@@ -8,7 +8,7 @@ You're probably here because you've already realized that using [PowerShell's `-
 **Do not use `cscript.exe`; it will cause a console window to appear.**
 
 ```
-wscript.exe HiddentPowershell.vbs -ExecutionPolicy ByPass -File "C:\Program Files\Get-HelloWorld.ps1"
+wscript.exe HiddenPowershell.vbs -ExecutionPolicy ByPass -File "C:\Program Files\Get-HelloWorld.ps1"
 ```
 
 This Will run Powershell in a completely hidden console by calling PowerShell like this:
@@ -21,7 +21,7 @@ You may also want to include the `-NonInteractive` parameter for the same reason
 
 If you have machines that have Windows Scripting Host (WSH) file extensions (like `.vbs`) disassociated from WSH; then you will need to add the `//E:vbscript` parameter:
 ```
-wscript.exe //E:vbscript HiddentPowershell.vbs ...
+wscript.exe //E:vbscript HiddenPowershell.vbs ...
 ```
 
 # Logging
