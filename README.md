@@ -3,6 +3,8 @@ Hopefully we'll have [a `pwshw.exe` soon](https://github.com/PowerShell/PowerShe
 
 You're probably here because you've already realized that using [PowerShell's `-WindowStyle Hidden` parameter](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/console/powershell.exe-command-line-help#parameters) without this script, doesn't completely hide the powershell console.
 
+**If you're wanting to run something other than PowerShell hidden, try [HiddenRun](https://github.com/UNT-CAS/HiddenRun).**
+
 # Usage
 
 ## Download HiddenPowershell.vbs
