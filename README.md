@@ -11,18 +11,17 @@ You're probably here because you've already realized that using [PowerShell's `-
 
 I suggest grabbing it at boot with a **startup script**, via GPO.
 Users won't see the the powershell console of a startup script, so it's not invasive.
-Be sure to adjust the `$path`:
+Be sure to adjust the `$path` and keep the *Script Parameters* length under 520 characters; the max in GPO:
 
-> powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -WindowStyle Hidden -Command "$path = 'C:\some\custom\path'; New-Item -Type 'Directory' -Path $path -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/UNT-CAS/HiddenPowershell/v1.0/HiddenPowershell.vbs' -OutFile ('{0}\HiddenPowershell.vbs' -f $path) -UseBasicParsing"
+> powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -WindowStyle Hidden -Command "$path = 'C:\Temp'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/UNT-CAS/HiddenPowershell/v1.0/HiddenPowershell.vbs' -OutFile ('{0}\HiddenPowershell.vbs' -f $path) -UseBasicParsing"
 
 :bangbang: Wherever you put it, be sure *users* can read, but not write to it.
 
 Be sure you check for the latest release.
 I don't expect a lot of changes to this script, but now that it's open source ... who knows?
 
-Maybe a screenshot would be nice:
-
-![image](https://user-images.githubusercontent.com/792482/40387455-6fb33862-5dd2-11e8-8aa1-c38ce5c55526.png)
+I know this seems simple, but pratical implementation is usually a bit more complex.
+[Here's how I've made it happen](https://github.com/UNT-CAS/HiddenPowershell/wiki/Practical-Download).
 
 ## Execute Powershell
 
