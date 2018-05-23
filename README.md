@@ -13,7 +13,7 @@ I suggest grabbing it at boot with a **startup script**, via GPO.
 Users won't see the the powershell console of a startup script, so it's not invasive.
 Be sure to adjust the `$path`:
 
-> powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -WindowStyle Hidden -Command "$path = 'C:\some\custom\path'; New-Item -Type 'Directory' -Path $path -Force; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/UNT-CAS/HiddenPowershell/v1.0/HiddenPowershell.vbs' -OutFile ('{0}\HiddenPowershell.vbs' -f $path) -UseBasicParsing"
+> powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -WindowStyle Hidden -Command "$path = 'C:\some\custom\path'; New-Item -Type 'Directory' -Path $path -Force; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/UNT-CAS/HiddenPowershell/v1.0/HiddenPowershell.vbs' -OutFile ('{0}\HiddenPowershell.vbs' -f $path) -UseBasicParsing"
 
 :bangbang: Wherever you put it, be sure *users* can read, but not write to it.
 
