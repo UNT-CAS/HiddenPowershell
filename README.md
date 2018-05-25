@@ -21,7 +21,7 @@ Be sure you check for the latest release.
 I don't expect a lot of changes to this script, but now that it's open source ... who knows?
 
 I know this seems simple, but pratical implementation is usually a bit more complex.
-[Here's how I've made it happen](https://github.com/UNT-CAS/HiddenPowershell/wiki/Practical-Download).
+[Here's how I've made it happen](http://blog.vertigion.com/2018/05/24/gpo-startup-script-practical-download/).
 
 ## Execute Powershell
 
